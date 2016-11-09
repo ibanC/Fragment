@@ -15,8 +15,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".fragment_listado" />
-        <activity android:name=".fragment_detalle"></activity>
+        <activity android:name=".Fragment_listado" />
+        <activity android:name=".Fragment_detalle"></activity>
     </application>
 
 </manifest>

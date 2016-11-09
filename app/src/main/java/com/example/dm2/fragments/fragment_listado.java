@@ -2,9 +2,7 @@ package com.example.dm2.fragments;
 
 import android.app.Activity;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class fragment_listado extends Fragment {
+public class Fragment_listado extends Fragment {
 
     private Pelicula[] datos=
             new Pelicula[]{
@@ -23,6 +21,8 @@ public class fragment_listado extends Fragment {
                     new Pelicula("Ocho Apellidos Catalanes",2015,"Emilio Martínez-Lázaro")
             };
     private ListView lstListado;
+    private PeliculasListener listener;
+
   public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState)
   {
       return inflater.inflate(R.layout.activity_fragment_listado,container,false);
@@ -56,6 +56,13 @@ class AdaptadorPeliculas extends ArrayAdapter<Pelicula>{
         return(item);
     }
 
+    }
+
+    public interface PeliculasListener {
+        void onPeliculaSeleccionada(Pelicula p);
+    }
+    public void setPeliculasListener (PeliculasListener listener){
+        this.listener=listener;
     }
 
 
