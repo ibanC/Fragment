@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -33,6 +34,16 @@ public class Fragment_listado extends Fragment {
         lstListado=(ListView)getView().findViewById(R.id.lstPeliculas);
         lstListado.setAdapter(new AdaptadorPeliculas(this));
 
+        lstListado.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int pos, long l) {
+
+                if(listener!=null)
+                {
+                    listener.onPeliculaSeleccionada((Pelicula)lstListado.getAdapter().getItem(pos));
+                }
+            }
+        });
 
     }
 

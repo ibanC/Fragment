@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Fragment_listado" />
-        <activity android:name=".Fragment_detalle"></activity>
+        <activity android:name=".Fragment_detalle" />
+        <activity android:name=".DetalleActivity"></activity>
     </application>
 
 </manifest>

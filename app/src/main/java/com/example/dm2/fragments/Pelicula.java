@@ -1,9 +1,11 @@
 package com.example.dm2.fragments;
 
+import java.io.Serializable;
+
 /**
  * Created by dm2 on 08/11/2016.
  */
-public class Pelicula {
+public class Pelicula implements Serializable{
 
     private String titulo;
     private int ano;

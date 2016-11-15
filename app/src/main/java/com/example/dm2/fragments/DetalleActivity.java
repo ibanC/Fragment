@@ -15,6 +15,8 @@ public class DetalleActivity extends AppCompatActivity{
         setContentView(R.layout.activity_detalle);
         Fragment_detalle detalle=(Fragment_detalle)getSupportFragmentManager().findFragmentById(R.id.FrgDetalle);
 
-        detalle.mostrarDetalle(getIntent().getStringExtra(EXTRA_TEXTO));
+        //detalle.mostrarDetalle(getIntent().getStringExtra(EXTRA_TEXTO));
+        detalle.mostrarDetalle((Pelicula)getIntent().getSerializableExtra(EXTRA_TEXTO));
+
     }
 }

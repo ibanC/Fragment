@@ -15,12 +15,12 @@ public class Fragment_detalle extends Fragment {
         return inflater.inflate(R.layout.fragment_detalle,container,false);
     }
 
-    public void mostrarDetalle(String texto)
+    public void mostrarDetalle(Pelicula p)
     {
         TextView txtAno=(TextView)getView().findViewById(R.id.Lblano);
-        txtAno.setText(texto);
+        txtAno.setText(String.valueOf(p.getAno()));
 
         TextView txtDirector=(TextView)getView().findViewById(R.id.Lbldirector);
-        txtDirector.setText(texto);
+        txtDirector.setText(p.getDirector());
     }
 }
